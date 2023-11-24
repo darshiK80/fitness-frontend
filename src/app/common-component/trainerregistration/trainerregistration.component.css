@@ -1,0 +1,29 @@
+
+.login-container {
+  background-image: url('../../../assets/ringo.jpeg'); /* Update the path as needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  height: 98vh;
+
+}
+
+.center-container {
+  padding-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+mat-card {
+  width: 80%;
+  max-width: 500px;
+
+}
+
+.custom-card mat-form-field {
+  width: 100%;
+}
