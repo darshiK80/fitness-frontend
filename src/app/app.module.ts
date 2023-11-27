@@ -13,13 +13,15 @@ import { UserregistrationComponent } from './common-component/userregistration/u
 import { AdminregistrationComponent } from './common-component/adminregistration/adminregistration.component';
 import { TrainerregistrationComponent } from './common-component/trainerregistration/trainerregistration.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UserregistrationComponent,
     AdminregistrationComponent,
-    TrainerregistrationComponent
+    TrainerregistrationComponent,
+
   ],
   imports: [
     BrowserModule,

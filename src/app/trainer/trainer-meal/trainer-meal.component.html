@@ -1,0 +1,46 @@
+
+<div class="row" style="padding: 10px">
+  <div class="col-sm-12">
+    <div class="row" style="padding: 10px; margin-right: 10px;" >
+
+      <button mat-flat-button   color="warn" (click)="assignMeal('')">Assign Meal</button>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="padding: 10px">
+
+  <div class="col-sm-12">
+
+    <table mat-table [dataSource]="mealList" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="Id">
+        <th mat-header-cell *matHeaderCellDef>Id</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.planName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="FoodList">
+        <th mat-header-cell *matHeaderCellDef>FoodList</th>
+        <td mat-cell *matCellDef="let element">
+          <ul>
+            <li *ngFor="let food of element.foodItems">{{ food.foodName }}</li>
+          </ul>
+        </td>
+      </ng-container>
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+  </div>
+
+
+</div>
+
